@@ -1,1 +1,1 @@
-# project-2
+# Gamer's Paradise
