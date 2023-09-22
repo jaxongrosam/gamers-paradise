@@ -25,19 +25,23 @@ const loginFormHandler = async (event) => {
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#name-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const name = document.querySelector('#password-signup').value.trim();
+    // const birthday = document.querySelector('#password-signup').value.trim();
+    //add birthday below. 
+
   
-    if (name && email && password) {
+    if (username && email && password) {
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ username, email, password, name}),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/profile');  //currently not in used. 09/21/2023,9:05pm
       } else {
         alert(response.statusText);
       }
@@ -45,10 +49,12 @@ const loginFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.login-form')
+    // .querySelector('.login-form')
+    .querySelector('.login-card')
     .addEventListener('submit', loginFormHandler);
   
   document
-    .querySelector('.signup-form')
+    // .querySelector('.signup-form')
+    .querySelector('.signup-card')
     .addEventListener('submit', signupFormHandler);
   
