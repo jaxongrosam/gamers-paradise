@@ -1,0 +1,24 @@
+<div>
+  <section>
+    <img src="" />
+    <h2>{{user.username}}</h2>
+    <div>
+      <p>Name: {{user.name}}</p>
+      <p>Age: {{user.age}}</p>
+      <p>Location: {{user.location}}</p>
+    </div>
+  </section>
+  <section>
+    <div>
+      <p>Favorite Games: {{user.favorites}}</p>
+      <p>Platforms: {{user.platforms}}</p>
+      <p>Platform Usernames: {{user.tags}}</p>
+    </div>
+    <aside>
+      <h3>Wishlist</h3>
+      {{#each user.wishlist as |item|}}
+        <p>{{item}}</p>
+      {{/each}}
+    </aside>
+  </section>
+</div>
