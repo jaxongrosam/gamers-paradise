@@ -3,7 +3,12 @@
     "title": "Legend of Zelda",
     "description": "hi",
     "developer": "Ninendo",
-    "platform": ["Family Computer Disk System","Nintendo Entertainment System","Game Boy Advance","GameCube"],
+    "platform": [
+      "Family Computer Disk System",
+      "Nintendo Entertainment System",
+      "Game Boy Advance",
+      "GameCube"
+    ],
     "release date": "February 21, 1986",
     "genre": "Action-adventure"
   },
@@ -30,5 +35,5 @@
     "platform": "PlayStation 3",
     "release date": "May 24, 2018",
     "genre": "Action role-playing"
-  },
+  }
 ]
