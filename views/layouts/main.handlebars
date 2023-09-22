@@ -14,13 +14,13 @@
     <header>
       <nav class="navbar sticky-top">
       <a><h1>Gamer's Paradise</h1></a>
-        <a>Home</a>
+        <a href="/">Home</a>
         <a>Games</a>
         {{#if loggedIn}}
-          <a>Profile</a>
+          <a href="/profile">Profile</a>
           <a>Logout</a>
         {{else}}
-          <a>Login</a>
+          <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
