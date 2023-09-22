@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3002;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: 'GAMER Paradise',
+  secret: "GAMER Paradise",
   cookie: {
     maxAge: 300000,
     httpOnly: true,
@@ -36,11 +36,12 @@ app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`\n Server running on: http://localhost:${PORT}`));
-
+  app.listen(PORT, () =>
+    console.log(`\n Server running on: http://localhost:${PORT}`)
+  );
 });
