@@ -1,0 +1,28 @@
+:root {
+    --main-bg-color: #273A68;
+    --secondary-bg-color: black;
+    --link-color: #12F5F5;
+    --main-txt-color: white;
+}
+body{
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+}
+header {
+    background-color: var(--secondary-bg-color);
+    color: var(--main-txt-color);
+    font-family: 'Zen Dots', cursive;
+    margin-bottom: 20px;
+}
+nav a {
+    color: var(--main-txt-color);
+    display: flex;
+    justify-content: space-evenly;
+}
+input {
+    border-radius: 20px;
+}
+button {
+    border-radius: 20px;
+    padding: 3px 15px;
+}
