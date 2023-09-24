@@ -1,4 +1,5 @@
 const logout = async () => {
+  console.log("TESTING LOG OUT!");
     const response = await fetch('/api/users/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
