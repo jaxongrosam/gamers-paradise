@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "Legend of Zelda",
     "description": "hi",
     "developer": "Ninendo",
@@ -9,31 +10,34 @@
       "Game Boy Advance",
       "GameCube"
     ],
-    "release date": "February 21, 1986",
+    "release_date": "February 21, 1986",
     "genre": "Action-adventure"
   },
   {
+    "id": 2,
     "title": "Pokemon",
     "description": "Gotta catch them all!............",
     "developer": "Game Freak",
     "platform": "",
-    "release date": "",
+    "release_date": "",
     "genre": "Role-playing"
   },
   {
+    "id": 3,
     "title": "Mario",
     "description": "Save Princess Peach??",
     "developer": "Nintendo EAD",
     "platform": ".......",
-    "release date": ".......",
+    "release_date": ".......",
     "genre": "Platform"
   },
   {
+    "id": 4,
     "title": "Darksoul",
     "description": "just die a lot!!.......",
     "developer": "FromSoftware",
     "platform": "PlayStation 3",
-    "release date": "May 24, 2018",
+    "release_date": "May 24, 2018",
     "genre": "Action role-playing"
   }
 ]
