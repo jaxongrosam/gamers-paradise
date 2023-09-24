@@ -1,28 +1,44 @@
 :root {
-    --main-bg-color: #273A68;
-    --secondary-bg-color: black;
-    --link-color: #12F5F5;
-    --main-txt-color: white;
+  --main-bg-color: #273a68;
+  --secondary-bg-color: black;
+  --link-color: #12f5f5;
+  --main-txt-color: white;
+  --card-bg-color: #d9d9d9;
 }
-body{
-    background-color: var(--main-bg-color);
-    color: var(--main-txt-color);
+body {
+  background-color: var(--main-bg-color);
 }
 header {
-    background-color: var(--secondary-bg-color);
-    color: var(--main-txt-color);
-    font-family: 'Zen Dots', cursive;
-    margin-bottom: 20px;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-txt-color);
+  font-family: "Zen Dots", cursive;
+  margin-bottom: 20px;
 }
 nav a {
-    color: var(--main-txt-color);
-    display: flex;
-    justify-content: space-evenly;
+  color: var(--main-txt-color);
+  display: flex;
+  justify-content: space-evenly;
 }
 input {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 button {
-    border-radius: 20px;
-    padding: 3px 15px;
+  border-radius: 20px;
+  padding: 3px 15px;
+}
+.card {
+  background-color: var(--card-bg-color);
+  margin: 5px;
+  padding: 10px;
+}
+.profile-image {
+  border-radius: 100%;
+  border-color: var(--card-bg-color);
+  border-width: 5px;
+  width: 225px;
+  height: 225px;
+}
+.profile-card h2,
+.profile-card h3 {
+  text-align: center;
 }

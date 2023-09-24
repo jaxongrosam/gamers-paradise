@@ -1,24 +1,28 @@
-<div>
-  <section>
-    <img src="" />
-    <h2>{{user.username}}</h2>
-    <div>
-      <p>Name: {{user.name}}</p>
-      <p>Age: {{user.age}}</p>
-      <p>Location: {{user.location}}</p>
+<div class="profile-card container">
+  <section class="row">
+    <div class="col-3 profile-image card">
+      <img src="" /></div>
+    <div class="col-8">
+      <div class="card">
+        <h2>{{username}}</h2></div>
+      <div class="card">
+        <p>Name: {{name}}</p>
+        <p>Age: {{age}}</p>
+        <p>Location: {{location}}</p>
+      </div>
     </div>
   </section>
-  <section>
-    <div>
-      <p>Favorite Games: {{user.favorites}}</p>
-      <p>Platforms: {{user.platforms}}</p>
-      <p>Platform Usernames: {{user.tags}}</p>
-    </div>
-    <aside>
+  <section class="row">
+    <aside class="col-3 card">
       <h3>Wishlist</h3>
       {{#each user.wishlist as |item|}}
         <p>{{item}}</p>
       {{/each}}
     </aside>
+    <div class="col-8 card">
+      <p>Favorite Games: {{favorites}}</p>
+      <p>Platforms: {{platforms}}</p>
+      <p>Platform Usernames: {{tags}}</p>
+    </div>
   </section>
 </div>
