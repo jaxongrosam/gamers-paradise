@@ -23,9 +23,9 @@
         <a><h1>Gamer's Paradise</h1></a>
         <a href="/">Home</a>
         <a>Games</a>
-        {{#if loggedIn}}
-          <a href="/profile">Profile</a>
-          <a>Logout</a>
+        {{#if logged_in}}
+           <a href="/profile">Profile</a>
+          <button class = "no-button" id="logout">Logout</button>
         {{else}}
           <a href="/login">Login</a>
         {{/if}}
@@ -34,6 +34,11 @@
     <main>
       {{{body}}}
     </main>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

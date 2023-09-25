@@ -1,0 +1,21 @@
+[
+    {
+      "username": "ron",
+      "email": "ron@aol.com",
+      "password": "password12345"
+    },
+    {
+      "username": "sally",
+      "email": "sally@aol.com",
+      "password": "password12345",
+      "name": "Sandy Cheeks",
+      "Location":"Bikini Bottom"
+    },
+    {
+      "username": "may",
+      "email": "may@aol.com",
+      "password": "password12345",
+      "name": "MayWeather"
+    }
+  ]
+   
