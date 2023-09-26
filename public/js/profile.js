@@ -1,5 +1,9 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
+
+    let profileImageUrl = "";  //need to code to grab image link. 
+    const profilePhotoEle = document.getElementById("profileID");
+    profilePhotoEle.src = profileImageUrl;
   
 //     const name = document.querySelector('#project-name').value.trim();
 //     const needed_funding = document.querySelector('#project-funding').value.trim();

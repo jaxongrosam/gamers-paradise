@@ -3,7 +3,12 @@ const { Post, User, Blog } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
-  res.render("homepage", {});
+  res.render("homepage", {
+    //stuff
+    
+    //checked in logged in 
+      logged_in: req.session.logged_in
+  });
 });
 
 router.get("/login", (req, res) => {
@@ -40,6 +45,15 @@ router.get("/signup", (req, res) => {
   }
 
   res.render("signup");
+});
+
+router.get("/upload", (req, res) => {
+  // if (req.session.loggedIn) {
+  //   res.redirect("/");
+  //   return;
+  // }
+
+  res.render("uploadimage");
 });
 
 module.exports = router;

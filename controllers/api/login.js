@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace("/profile");   //DOUBLE CHECK
+        document.location.replace("profile");   //DOUBLE CHECK
       } else {
         alert(response.statusText);
       }
