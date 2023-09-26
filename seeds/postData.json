@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Hello World",
+    "post": "This is a first post for testing reasons",
+    "date_created": "01/01/2023",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "name": "'Sup World'",
+    "post": "This is the second post for testing reasons",
+    "date_created": "01/01/2023",
+    "user_id": 1
+  },
+  {
+    "id": 3,
+    "name": "Hey World",
+    "post": "This is the third post for testing reasons",
+    "date_created": "01/01/2023",
+    "user_id": 1
+  }
+]
