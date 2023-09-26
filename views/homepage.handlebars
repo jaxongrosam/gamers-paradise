@@ -1,13 +1,10 @@
-<div>
-<a style="color: white" href="/uploadimage"><button>Upload image</button>  - (Yee is using this as TEST only)</a>
-</div>
+<section>
+<section>
+    {{#each posts as |post|}}
+        {{> post-details}}
+    {{/each}}
+</section>
+</section>
+<aside>
 
-<div>
-    <div>
-        <h1>Upload a File</h1>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".jpg, .png, .gif">
-            <button type="submit">Upload</button>
-        </form>
-    </div>
-</div>
+</aside>
