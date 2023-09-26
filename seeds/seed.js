@@ -1,9 +1,11 @@
+
 const sequelize = require("../config/connection");
-const { User, Post } = require("../models");
+const { User, Post, Game } = require("../models");
 
 const userData = require("./userData.json");
 const postData = require("./postData.json");
-// const gameData = require('./gameData.json');
+const gameData = require('./gameData.json');
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -17,12 +19,13 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-  // for (const game of gameData) {
-  //   await Game.create({
-  //     ...game,
-  //     user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  for (const game of gameData) {
+    await Game.create({
+      ...game,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
 
   process.exit(0);
 };
