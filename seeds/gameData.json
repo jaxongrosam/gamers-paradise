@@ -4,13 +4,8 @@
     "title": "Legend of Zelda",
     "description": "hi",
     "developer": "Ninendo",
-    "platform": [
-      "Family Computer Disk System",
-      "Nintendo Entertainment System",
-      "Game Boy Advance",
-      "GameCube"
-    ],
-    "release_date": "February 21, 1986",
+    "platform": "Nintendo Entertainment System",
+    "release_date": "1986-02-21",
     "genre": "Action-adventure"
   },
   {
@@ -19,7 +14,6 @@
     "description": "Gotta catch them all!............",
     "developer": "Game Freak",
     "platform": "",
-    "release_date": "",
     "genre": "Role-playing"
   },
   {
@@ -28,7 +22,6 @@
     "description": "Save Princess Peach??",
     "developer": "Nintendo EAD",
     "platform": ".......",
-    "release_date": ".......",
     "genre": "Platform"
   },
   {
@@ -37,7 +30,7 @@
     "description": "just die a lot!!.......",
     "developer": "FromSoftware",
     "platform": "PlayStation 3",
-    "release_date": "May 24, 2018",
+    "release_date": "2018-05-24", 
     "genre": "Action role-playing"
   }
 ]
