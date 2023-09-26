@@ -33,11 +33,7 @@ User.init(
       allowNull: true,
     },
     age: {
-      type: DataTypes.DATE,
-      allowNull: true,
-    },
-    location: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
     password: {
