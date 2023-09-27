@@ -1,14 +1,16 @@
 <div class="profile-card container">
   <section class="row">
     <div class="col-3 profile-image card">
-      <img src="" alt="No photo" id="profileID" /></div>
+      <img src="{{image}}" alt="No photo" id="profileID" /></div>
+      {{!-- <img src="profile-placeholder.jpg" alt="No photo" id="profileID" /></div> --}}
+            {{!-- <img src="images/Dark_Souls.jpg" alt="No photo" id="profileID" /></div> --}}
+                        {{!-- <img src="./rontron_avatar.png" alt="No photo" id="profileID" /></div> --}}
     <div class="col-8">
       <div class="card">
         <h2>{{username}}</h2></div>
       <div class="card">
         <p>Name: {{name}}</p>
-        <p>Age: {{age}}</p>
-        <p>Location: {{location}}</p>
+        <p>Email: {{email}}</p>
       </div>
     </div>
   </section>
@@ -22,7 +24,7 @@
     <div class="col-8 card">
       <p>Favorite Games: {{favorites}}</p>
       <p>Platforms: {{platforms}}</p>
-      <p>Platform Usernames: {{tags}}</p>
+      <p>Genre: {{tags}}</p>
     </div>
   </section>
 </div>

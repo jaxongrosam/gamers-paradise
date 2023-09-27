@@ -6,7 +6,8 @@
     "developer": "Ninendo",
     "platform": "Nintendo Entertainment System",
     "release_date": "1986-02-21",
-    "genre": "Action-adventure"
+    "genre": "Action-adventure",
+    "image": "Legend_of_zelda_cover.png"
   },
   {
     "id": 2,
@@ -14,7 +15,8 @@
     "description": "Gotta catch them all!............",
     "developer": "Game Freak",
     "platform": "",
-    "genre": "Role-playing"
+    "genre": "Role-playing",
+    "image": "pokemon_red_blue.png"
   },
   {
     "id": 3,
@@ -22,7 +24,8 @@
     "description": "Save Princess Peach??",
     "developer": "Nintendo EAD",
     "platform": ".......",
-    "genre": "Platform"
+    "genre": "Platform",
+    "image": "super_mario_bros_.png"
   },
   {
     "id": 4,
@@ -31,6 +34,7 @@
     "developer": "FromSoftware",
     "platform": "PlayStation 3",
     "release_date": "2018-05-24", 
-    "genre": "Action role-playing"
+    "genre": "Action role-playing",
+    "image": "Dark_Souls.jpg"
   }
 ]

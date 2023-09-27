@@ -13,6 +13,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+//get all games
 router.get("/", async (req, res) => {
   try {
     const allGames = await gameData.findAll();

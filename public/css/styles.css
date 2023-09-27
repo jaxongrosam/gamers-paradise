@@ -42,3 +42,32 @@ button {
 .profile-card h3 {
   text-align: center;
 }
+
+.profile-game-card { 
+  width: 600px; 
+  height: 400px; 
+}
+#profileID {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.display-icon {
+  /* color: red; */
+  font-size: 20px;
+}
+.game-card {
+  background-color: var(--card-bg-color);
+
+}
+
+.game-card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.gametext-card {
+  background-color: var(--card-bg-color);
+  /* margin: 5px; */
+}

@@ -1,15 +1,15 @@
 [
     {
-      "username": "ron",
+      "username": "Ron-Tron",
       "email": "ron@aol.com",
-      "password": "password12345"
+      "password": "password12345",
+      "name": "Ronnie Bunny"
     },
     {
-      "username": "sally",
+      "username": "Sandy Cheeks",
       "email": "sally@aol.com",
       "password": "password12345",
-      "name": "Sandy Cheeks",
-      "Location":"Bikini Bottom"
+      "name": "Sally"
     },
     {
       "username": "may",
