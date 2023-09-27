@@ -13,10 +13,8 @@ async function signupFormHandler(event) {
         email,
         password,
         name,
-        birthday
+        // birthday
     };
-
-    console.log("*****SIGNUP DATA*****:", signUpParams);
   
     //note: These three fields (username, email, password) are required. The rest, are not. 
     if (username && email && password) {

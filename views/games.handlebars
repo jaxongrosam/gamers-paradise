@@ -1,0 +1,69 @@
+  <div class="profile-game-card container col-lg-3 col-md-6">
+    <section class="row">
+      <div class="col">
+
+        <div class="game-card">
+          <h2>{{username}}</h2>
+            <a href="/games/1"></a>
+              {{!-- <img src="{{image}}" alt="Image Description"> --}}
+              <img src="/images/Legend_of_zelda_cover.png" alt="Image Description">
+            </a>
+        </div>
+
+        <div class="gametext-card" flex>
+          <p class="display-icon">{{title}}
+            &#127918; (testing - Zelda)
+            <span > &#10084 </span>   
+            <span> &#128722 </span> 
+          </p>
+        </div>
+        
+        <div class="game-card">
+          <h2>{{username}}</h2>
+          {{!-- <img src="{{image}}" alt="Image Description"> --}}
+           <img src="/images/Dark_Souls.jpg" alt="Image Description">
+        </div>
+        
+
+        <div class="gametext-card" flex>
+          <p class="display-icon">{{title}}
+            &#127918; (testing - Dark Souls)
+            <span > &#10084 </span>   
+            <span> &#128722 </span> 
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+{{#each gameData as |game|}}
+  <div class="profile-game-card container col-lg-3 col-md-6">
+    <section class="row">
+      <div class="col">
+        <div class="game-card">
+          <h2>{{username}}</h2>
+          <a href="/games/{{game.id}}">
+            <img src="/images{{game.image}}" alt="{{game.title}} Image">
+          </a>
+        </div>
+        <div class="gametext-card" flex>
+          <p class="display-icon">{{game.title}}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+{{/each}}
+
+
+
+
+
+
+{{!-- <script src="./js/game.js"></script> --}}
+
+{{!-- 
+https://www.htmlsymbols.xyz/games-symbols 
+https://www.compart.com/en/unicode/U+1F6D2
+--}}

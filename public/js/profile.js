@@ -1,52 +1,9 @@
-const newFormHandler = async (event) => {
-    event.preventDefault();
+const userData = "";  // how to connect this with database... ???? 
+const profileImage = document.getElementById("profileID");
 
-    let profileImageUrl = "";  //need to code to grab image link. 
-    const profilePhotoEle = document.getElementById("profileID");
-    profilePhotoEle.src = profileImageUrl;
-  
-//     const name = document.querySelector('#project-name').value.trim();
-//     const needed_funding = document.querySelector('#project-funding').value.trim();
-//     const description = document.querySelector('#project-desc').value.trim();
-  
-//     if (name && needed_funding && description) {
-//       const response = await fetch(`/api/projects`, {
-//         method: 'POST',
-//         body: JSON.stringify({ name, needed_funding, description }),
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//       });
-  
-//       if (response.ok) {
-//         document.location.replace('/profile');
-//       } else {
-//         alert('Failed to create project');
-//       }
-//     }
-//   };
-  
-//   const delButtonHandler = async (event) => {
-//     if (event.target.hasAttribute('data-id')) {
-//       const id = event.target.getAttribute('data-id');
-  
-//       const response = await fetch(`/api/projects/${id}`, {
-//         method: 'DELETE',
-//       });
-  
-//       if (response.ok) {
-//         document.location.replace('/profile');
-//       } else {
-//         alert('Failed to delete project');
-//       }
-//     }
-
+if (userData.image !== "") {
+  profileImage.src = userData.image;
+} else {
+  // If no user image is found, set the src attribute to the default placeholder image
+  profileImage.src = "profile-placeholder.jpg";
 };
-  
-//   document
-//     .querySelector('.new-project-form')
-//     .addEventListener('submit', newFormHandler);
-  
-//   document
-//     .querySelector('.project-list')
-//     .addEventListener('click', delButtonHandler);
