@@ -2,39 +2,71 @@
   {
     "id": 1,
     "title": "Legend of Zelda",
-    "description": "hi",
+    "description": "Step into the shoes of Link, and save Princess Zelda and all of Hyrule!",
     "developer": "Ninendo",
     "platform": "Nintendo Entertainment System",
     "release_date": "1986-02-21",
-    "genre": "Action-adventure",
+    "genre": "Action-Adventure",
     "image": "Legend_of_zelda_cover.png"
   },
   {
     "id": 2,
-    "title": "Pokemon",
-    "description": "Gotta catch them all!............",
+    "title": "Pokemon Red/Blue",
+    "description": "Gotta catch 'em all!",
     "developer": "Game Freak",
-    "platform": "",
-    "genre": "Role-playing",
+    "platform": "Game Boy",
+    "release_date": "1996-02-27",
+    "genre": "Role-Playing",
     "image": "pokemon_red_blue.png"
   },
   {
     "id": 3,
-    "title": "Mario",
-    "description": "Save Princess Peach??",
-    "developer": "Nintendo EAD",
-    "platform": ".......",
-    "genre": "Platform",
+    "title": "Super Mario Bros.",
+    "description": "Jump and power-up your way through the Mushroom Kingdom and save Princess Toadstool!",
+    "developer": "Nintendo",
+    "platform": "Nintendo Entertainment System",
+    "release_date": "1986-09-13",
+    "genre": "Platforming",
     "image": "super_mario_bros_.png"
   },
   {
     "id": 4,
-    "title": "Darksoul",
-    "description": "just die a lot!!.......",
+    "title": "Dark Souls",
+    "description": "You Died",
     "developer": "FromSoftware",
-    "platform": "PlayStation 3",
-    "release_date": "2018-05-24", 
-    "genre": "Action role-playing",
+    "platform": "PlayStation 3, Xbox 360, Windows",
+    "release_date": "2011-09-22",
+    "genre": "Action Role-Playing",
     "image": "Dark_Souls.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Hollow Knight",
+    "description": "Save Hallownest from a curse within a dream",
+    "developer": "Team Cherry",
+    "platform": "Windows, Linux, macOS, Nintendo Switch, Playstation 4, Xbox One",
+    "release_date": "2017-02-24",
+    "genre": "Metroidvania",
+    "image": "Hollow_Knight.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Halo 3",
+    "description": "Take over as Master Chief once more to finish the fight",
+    "developer": "Bungie Inc.",
+    "platform": "Xbox 360",
+    "release_date": "2007-09-25",
+    "genre": "First-Person Shooter",
+    "image": "Halo_3.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Stardew Valley",
+    "description": "Inherit a family farm, build and relax with this cozy simulator",
+    "developer": "ConcernedApe",
+    "platform": "Windows, macOS, Linux, Playstation 4, Xbox One, Nintendo Switch",
+    "release_date": "2016-02-26",
+    "genre": "Role-Playing Simulation",
+    "image": "Stardew_Valley.png"
   }
 ]
