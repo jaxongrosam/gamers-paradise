@@ -35,48 +35,8 @@ router.get("/login", (req, res) => {
 
 router.get("/games", async (req, res) => {
 try{
-  // const gameData = await Game.findAll();
-  const gameData = [
-    {
-      "id": 1,
-      "title": "Legend of Zelda",
-      "description": "hi",
-      "developer": "Ninendo",
-      "platform": "Nintendo Entertainment System",
-      "release_date": "1986-02-21",
-      "genre": "Action-adventure",
-      "image": "Legend_of_zelda_cover.png"
-    },
-    {
-      "id": 2,
-      "title": "Pokemon",
-      "description": "Gotta catch them all!............",
-      "developer": "Game Freak",
-      "platform": "",
-      "genre": "Role-playing",
-      "image": "pokemon_red_blue.png"
-    },
-    {
-      "id": 3,
-      "title": "Mario",
-      "description": "Save Princess Peach??",
-      "developer": "Nintendo EAD",
-      "platform": ".......",
-      "genre": "Platform",
-      "image": "super_mario_bros_.png"
-    },
-    {
-      "id": 4,
-      "title": "Darksoul",
-      "description": "just die a lot!!.......",
-      "developer": "FromSoftware",
-      "platform": "PlayStation 3",
-      "release_date": "2018-05-24", 
-      "genre": "Action role-playing",
-      "image": "Dark_Souls.jpg"
-    }
-  ]
-  // const games = gameData.map((games) => games.get({ plain: true }));
+  const gameData = await Game.findAll();
+  const games = gameData.map((games) => games.get({ plain: true }));
 
   res.render("games", {
     games,
@@ -85,7 +45,6 @@ try{
 } 
 catch (err){res.status(500).json(err);
 }
-
 });
  
 router.get("/profile", withAuth, async (req, res) => {
