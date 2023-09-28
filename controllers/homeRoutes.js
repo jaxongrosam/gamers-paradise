@@ -35,17 +35,17 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/games", async (req, res) => {
-try{
-  const gameData = await Game.findAll();
-  const games = gameData.map((games) => games.get({ plain: true }));
+  try {
+    const gameData = await Game.findAll();
+    const games = gameData.map((games) => games.get({ plain: true }));
 
-  res.render("games", {
-    games,
-    logged_in: req.session.logged_in
-  });
-} 
-catch (err){res.status(500).json(err);
-}
+    res.render("games", {
+      games,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //view single game with details
@@ -66,7 +66,7 @@ router.get("/games/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
- 
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
