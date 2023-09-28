@@ -58,7 +58,6 @@ button {
 }
 .game-card {
   background-color: var(--card-bg-color);
-
 }
 
 .game-card img {
@@ -74,4 +73,10 @@ button {
 
 .favBtn:hover {
   cursor: pointer;
+}
+
+.animatedelement {
+  width: 100px;
+  height: 10px;
+  background-color: #3498db;
 }
