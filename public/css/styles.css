@@ -60,7 +60,6 @@ button {
 }
 .game-card {
   background-color: var(--card-bg-color);
-
 }
 
 .game-card img {
@@ -79,7 +78,7 @@ button {
 }
 
 .animatedelement {
-  width: 100px;
+  width: 200px;
   height: 10px;
   background-color: #3498db;
 }
