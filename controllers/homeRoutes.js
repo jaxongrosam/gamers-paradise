@@ -1,11 +1,12 @@
 const router = require("express").Router();
-const { Post, User, Game, Image } = require("../models");  //add Image?
+const { Post, User, Game, Profile, Image } = require("../models"); //add Image?
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
-      include: [{
+      include: [
+        {
           model: User,
           attributes: ["username"],
         },
@@ -53,7 +54,7 @@ router.get("/games/:id", withAuth, async (req, res) => {
   try {
     const gameData = await Game.findAll({
       include: { all: true, nested: true },
-      where: { id: req.params.id},
+      where: { id: req.params.id },
     });
 
     const game = gameData.map((g) => g.get({ plain: true }));
@@ -71,7 +72,7 @@ router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Post }],
+      include: [{ model: Post, model: Profile }],
     });
 
     const user = userData.get({ plain: true });

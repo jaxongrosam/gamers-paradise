@@ -1,8 +1,9 @@
 const User = require("./User");
 const Post = require("./Post");
-const Game = require('./gameData');
-const Image = require('./image');
-const FavoriteGame = require('./favoriteGame');
+const Game = require("./gameData");
+const Image = require("./image");
+const FavoriteGame = require("./favoriteGame");
+const Profile = require("./Profile");
 
 User.hasMany(Post, {
   foreignKey: "user_id",
@@ -13,20 +14,22 @@ Post.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Image.belongsTo(User, { 
-  foreignKey: 'user_id' 
+Image.belongsTo(User, {
+  foreignKey: "user_id",
 });
 
-// Image.belongsTo(Game, { 
-//   foreignKey: 'game_id' 
+// Image.belongsTo(Game, {
+//   foreignKey: 'game_id'
 // });
+Profile.belongsTo(User, {
+  foreignKey: "user_id",
+});
 
-
-FavoriteGame.belongsTo(User,{
+FavoriteGame.belongsTo(User, {
   foreignKey: "userId", //correct?
 });
-FavoriteGame.belongsTo(Game,{
-  foreignKey: "id",  //correct?
+FavoriteGame.belongsTo(Game, {
+  foreignKey: "id", //correct?
 });
 
-module.exports = { User, Post, Game, Image, FavoriteGame };
+module.exports = { User, Post, Game, Image, FavoriteGame, Profile };
