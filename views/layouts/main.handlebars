@@ -23,11 +23,13 @@
       <div class="animatedelement">
         <div class="square"></div>
       </div>
-      <script src="anime.js"></script>
-      <script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+      <script defer>
         anime({
-          targets: '.square',
+          targets: '.animatedelement',
           translateX: 250,
+          direction: 'reverse',
+          easing: 'easeInOutSine'
         });
       </script>
       <nav class="navbar sticky-top">
