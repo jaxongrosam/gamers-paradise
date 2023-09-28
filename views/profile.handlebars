@@ -1,10 +1,9 @@
 <div class="profile-card container">
   <section class="row">
     <div class="col-3 profile-image card">
-      <img src="{{image}}" alt="No photo" id="profileID" /></div>
-      {{!-- <img src="profile-placeholder.jpg" alt="No photo" id="profileID" /></div> --}}
-            {{!-- <img src="images/Dark_Souls.jpg" alt="No photo" id="profileID" /></div> --}}
-                        {{!-- <img src="./rontron_avatar.png" alt="No photo" id="profileID" /></div> --}}
+      <img src="{{image}}" alt="No photo" id="profileID" />
+      {{!-- <img src="./uploads/rontron_avatar.png" alt="No photo" id="profileID" /> --}}
+    </div>
     <div class="col-8">
       <div class="card">
         <h2>{{username}}</h2></div>
@@ -29,4 +28,14 @@
   </section>
 </div>
 
-<script src="./js/profile.js"></script>
+<div class = "imageupload-form col">
+  <h1>Upload a profile</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" accept=".jpg, .png, .gif">
+    <button type="submit">Upload</button>
+  </form>
+</div>
+  {{!-- <img src="./uploads/rontron_avatar.png" alt="missing photo"></img> --}}
+
+<script src="./profile.js"></script>
+<script src="./js/image.js"></script>

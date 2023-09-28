@@ -2,19 +2,35 @@ const router = require('express').Router();
 const multer = require('multer'); // Middleware for handling file uploads
 const upload = multer({ dest: 'uploads/' }); // Specify the destination folder
 const withAuth = require('../../utils/auth');
-// const { error } = require('console');
 
-router.post('/api/upload', upload.single('image'), (req, res) => {
+router.post('/profile', upload.single('image'), (req, res) => {
+  console.log("UPLOAD---1")
+  try {
+    console.log("UPLOAD---2")
+    const { filename } = req.file; 
+    const { user_id } = req.body; 
 
-try{
-  //need arguments. try/catch. 
-  res.status(200).json({ message: 'Image uploaded successfully.' });
-}
-catch{
-  console.error(err);
-  res.status(400).json(err);
-}
+    // Save the file details to the database using your Sequelize model
+    Image.create({
+      filename,
+      user_id,
+    })
+      .then(() => {
+        console.log("UPLOAD---4");
+        res.status(200).json({ message: 'Image uploaded successfully.' });
+      })
+      .catch((error) => {
+        console.log("UPLOAD---5");
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+      });
+  } catch (error) {
+    console.log("UPLOAD---1");
+    console.error(error);
+    res.status(400).json({ error: 'Bad Request' });
+  }
 });
+
 
 // Get image by ID
 router.get('/:id', async (req, res) => {

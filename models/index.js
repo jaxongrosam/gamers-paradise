@@ -12,9 +12,9 @@ Post.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-// Image.belongsTo(User, { 
-//   foreignKey: 'user_id' 
-// });
+Image.belongsTo(User, { 
+  foreignKey: 'user_id' 
+});
 
 // Image.belongsTo(Game, { 
 //   foreignKey: 'game_id' 

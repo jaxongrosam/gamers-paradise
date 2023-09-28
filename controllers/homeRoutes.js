@@ -48,10 +48,16 @@ catch (err){res.status(500).json(err);
 });
  
 router.get("/profile", withAuth, async (req, res) => {
+  //NOTE: Need to also make favGame code. 
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Post }],
+      include: [
+        {
+          model: Game,
+          attributes: ["username"],
+        },
+      ],
     });
 
     const user = userData.get({ plain: true });
@@ -74,17 +80,8 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-// router.get("/upload", (req, res) => {
-//   // if (req.session.loggedIn) {
-//   //   res.redirect("/");
-//   //   return;
-//   // }
-
-//   res.render("uploadimage");
-// });
-
 //get game by id
-router.get("/games/id", async (req, res) => {
+router.get("/games/:id", async (req, res) => {
   try {
     const oneGame = await gameData.findByPk(req.params.id);
     if (!oneGame) {
@@ -93,8 +90,10 @@ router.get("/games/id", async (req, res) => {
         .json({ message: "Sorry, I don't see any games with that id." });
       return;
     }
-    res.render('games');  //wrong?? 
-    res.status(200).json(oneGame);
+    res.render('gameid',{
+    oneGame,
+    logged_in: req.session.logged_in}
+    );
   } catch (err) {
     res.status(500).json(err);
   }
