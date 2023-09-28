@@ -2,7 +2,10 @@
     <section class="row">
       <div class="col">
       {{#each games as |game index|}}
+
         {{>game-list}}
+        {{>game-details}}
+        
       {{/each}}
       </div>
     </section>
@@ -10,10 +13,4 @@
 
 
 
-
-
-
-
-
-
-{{!-- <script src="./js/game.js"></script> --}}
+<script src="./js/game.js"></script>

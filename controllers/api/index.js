@@ -7,6 +7,6 @@ const imageRoutes = require("./imageRoutes");
 router.use("/users", userRoutes);
 router.use("/post", postRoutes);
 router.use("/games", gameDataRoutes);
-router.use("/image", imageRoutes);
+// router.use("/upload", imageRoutes);
 
 module.exports = router;

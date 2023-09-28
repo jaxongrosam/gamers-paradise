@@ -5,10 +5,10 @@ console.log("image upload clicked.");
   const fileInput = document.querySelector('input[type="file"]');
   const selectedFile = fileInput.files[0];
 
-  if (!selectedFile) {
-    console.error("No file selected.");
-    return;
-  }
+  // if (!selectedFile) {
+  //   console.error("No file selected.");
+  //   return;
+  // }
 
   // Create a FormData object to send the file
   const formData = new FormData();

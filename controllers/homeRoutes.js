@@ -74,30 +74,23 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-// router.get("/upload", (req, res) => {
-//   // if (req.session.loggedIn) {
-//   //   res.redirect("/");
-//   //   return;
-//   // }
-
-//   res.render("uploadimage");
-// });
-
 //get game by id
-router.get("/games/id", async (req, res) => {
-  try {
-    const oneGame = await gameData.findByPk(req.params.id);
-    if (!oneGame) {
-      res
-        .status(404)
-        .json({ message: "Sorry, I don't see any games with that id." });
-      return;
-    }
-    res.render('games');  //wrong?? 
-    res.status(200).json(oneGame);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get("/game/:id", async (req, res) => {
+//   try {
+//     console.log("tester1");
+//     const oneGame = await gameData.findByPk(req.params.id);
+//     if (!oneGame) {
+//       res
+//         .status(404)
+//         .json({ message: "Sorry, I don't see any games with that id." });
+//       return;
+//     }
+//     console.log("tester2");
+//     res.render('gameid');
+//     res.status(200).json(oneGame);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

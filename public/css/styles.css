@@ -46,6 +46,7 @@ button {
 .profile-game-card { 
   width: 600px; 
   height: 400px; 
+  display: block;
 }
 #profileID {
   max-width: 100%;
@@ -58,7 +59,12 @@ button {
 }
 .game-card {
   background-color: var(--card-bg-color);
+  display: block;
+}
 
+.game-card2{
+  background-color: var(--card-bg-color);
+  display: none;
 }
 
 .game-card img {
@@ -70,4 +76,8 @@ button {
 .gametext-card {
   background-color: var(--card-bg-color);
   /* margin: 5px; */
+}
+
+.game-cover:hover {
+  cursor: pointer;
 }

@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const multer = require('multer'); // Middleware for handling file uploads
-const upload = multer({ dest: 'uploads/' }); // Specify the destination folder
+const upload = multer({ dest: './public/uploads' }); // Specify the destination folder
 const withAuth = require('../../utils/auth');
 // const { error } = require('console');
 
-router.post('/api/upload', upload.single('image'), (req, res) => {
+router.post('/', upload.single('image'), (req, res) => {
 
 try{
   //need arguments. try/catch. 
