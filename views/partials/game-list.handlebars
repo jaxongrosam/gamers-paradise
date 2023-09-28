@@ -1,16 +1,10 @@
-<div class="game-card">
-        <a href="/games/{{id}}"></a>
-        <img src="/images/{{image}}" alt="Image Description">
-        </a>
-</div>
+<a href="/games/{{id}}"  class="card game-card shadow-sm pt-3 mb-5 bg-white rounded " style="width: 18rem;">
+<img class="card-img-top" src="/images/{{image}}" alt="Card image cap">
+  <div class="card-body d-flex align-content-end flex-wrap">
+    <h5 class="d-flex align-content-end shadow-lg p-3 mb-2 bg-white rounded card-title">{{title}}</h5>
+    </div>
+</a>
 
-<div class="gametext-card" flex>
-<p class="display-icon">
-        &#127918; {{title}}
-        <span > &#10084 </span>   
-        <span> &#128722 </span> 
-</p>
-</div>
 
 {{!-- Source of emoji
 https://www.htmlsymbols.xyz/games-symbols 

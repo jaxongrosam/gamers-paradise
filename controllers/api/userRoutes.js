@@ -68,8 +68,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
-
 //User logout.
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
@@ -81,4 +79,4 @@ router.post('/logout', (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router

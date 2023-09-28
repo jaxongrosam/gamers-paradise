@@ -2,13 +2,13 @@ document.querySelector("form").addEventListener("submit", async function (event)
   event.preventDefault();
 console.log("image upload clicked.");
   // Get the file input element
-  const fileInput = document.querySelector('input[type="file"]');
+  const fileInput = document.querySelector('input[name="image"]');
   const selectedFile = fileInput.files[0];
 
-  if (!selectedFile) {
-    console.error("No file selected.");
-    return;
-  }
+  // if (!selectedFile) {
+  //   console.error("No file selected.");
+  //   return;
+  // }
 
   // Create a FormData object to send the file
   const formData = new FormData();

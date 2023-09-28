@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const multer = require('multer'); // Middleware for handling file uploads
-const upload = multer({ dest: 'uploads/' }); // Specify the destination folder
+const upload = multer({ dest: './public/uploads' }); // Specify the destination folder
 const withAuth = require('../../utils/auth');
 // const { error } = require('console');
 
-router.post('/api/upload', upload.single('image'), (req, res) => {
+router.post('/', upload.single('image'), (req, res) => {
 
 try{
-  //need arguments. try/catch. 
+  const {path, user_id} = req.body; 
   res.status(200).json({ message: 'Image uploaded successfully.' });
 }
 catch{
@@ -16,11 +16,11 @@ catch{
 }
 });
 
-// Get image by ID
+// Get image by ID 
 router.get('/:id', async (req, res) => {
   try {
     const imageId = req.params.id;
-    const image = await Image.findByPk(imageId);
+    const image = await image.findByPk(imageId);
 
     if (!image) {
       return res.status(404).send('Image not found');
@@ -51,7 +51,7 @@ module.exports = router;
 // const upload = multer({ dest: 'uploads/' }); // Specify the destination folder
 // const { Image } = require('../../models'); // Import your Sequelize Image model
 
-// router.post('/upload', upload.single('file'), async (req, res) => {
+// router.post('/upload', upload.single('image'), async (req, res) => {
 //   try {
 //     // Check if a file was uploaded
 //     if (!req.file) {

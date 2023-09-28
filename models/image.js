@@ -14,13 +14,13 @@ Image.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // user_id: {
-    //     type: DataTypes.INTEGER,
-    //     // references: {
-    //     //   model: "user", 
-    //     //   key: 'id', 
-    //     // }, 
-    // },
+    user_id: {
+        type: DataTypes.INTEGER,
+        // references: {
+        //   model: "user", 
+        //   key: 'id', 
+        // }, 
+    },
     // game_id: DataTypes.INTEGER,
     // // references: {
     // //     model: "gameData", 
@@ -29,7 +29,7 @@ Image.init(
   },
   {
     sequelize,
-    modelName: 'Image',
+    modelName: 'image',
   }
 );
 

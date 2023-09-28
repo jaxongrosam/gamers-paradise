@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { gameData } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+//create game data. (Currently not in use.)
 router.post("/", withAuth, async (req, res) => {
   try {
     const newGame = await gameData.create({
@@ -23,6 +24,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//get game by id
 router.get("/:id", async (req, res) => {
   try {
     const oneGame = await gameData.findByPk(req.params);
