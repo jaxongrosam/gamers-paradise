@@ -37,6 +37,8 @@ button {
   border-width: 5px;
   width: 225px;
   height: 225px;
+  background-image: url("../uploads/basic-profile.jpeg");
+  background-position: center;
 }
 .profile-image img {
   object-fit: contain;
@@ -58,6 +60,7 @@ button {
 }
 .game-card {
   background-color: var(--card-bg-color);
+
 }
 
 .game-card img {
