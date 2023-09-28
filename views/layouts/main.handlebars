@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -19,6 +20,16 @@
   </head>
   <body>
     <header>
+      <div class="animatedelement">
+        <div class="square"></div>
+      </div>
+      <script src="anime.js"></script>
+      <script>
+        anime({
+          targets: '.square',
+          translateX: 250,
+        });
+      </script>
       <nav class="navbar sticky-top">
         <a><h1>Gamer's Paradise</h1></a>
         <a href="/">Home</a>
@@ -36,7 +47,7 @@
     </main>
 
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></scrip>
     {{/if}}
 
     <script
