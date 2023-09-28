@@ -11,7 +11,7 @@ async function postFormHandler(event) {
   };
   console.log(newPostParams);
   if (name && content) {
-    const response = await fetch("/api/post", {
+    const response = await fetch("/api/posts", {
       method: "post",
       body: JSON.stringify(newPostParams),
       headers: { "Content-Type": "application/json" },
