@@ -29,4 +29,3 @@ const loginFormHandler = async (event) => {
   document
     .querySelector('.login-card')
     .addEventListener('submit', loginFormHandler);
-  

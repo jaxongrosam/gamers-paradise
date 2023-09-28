@@ -9,15 +9,15 @@
   {
     "id": 2,
     "name": "'Sup World'",
-    "post": "This is the second post for testing reasons",
+    "post": "It's like my life got sucked out of me then back again. I hate dying in Dark Souls. Does anyboy agree? ",
     "date_created": "01/01/2023",
-    "user_id": 1
+    "user_id": 3
   },
   {
     "id": 3,
-    "name": "Hey World",
-    "post": "This is the third post for testing reasons",
+    "name": "A Plumber's Dream??",
+    "post": "What if... You can travel the entire world via pipes? I sometimes dream about this. No visa required, but language will, still be a barrier.",
     "date_created": "01/01/2023",
-    "user_id": 1
+    "user_id": 2
   }
 ]

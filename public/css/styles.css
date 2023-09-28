@@ -38,16 +38,15 @@ button {
   width: 225px;
   height: 225px;
 }
+.profile-image img {
+  object-fit: contain;
+}
+
 .profile-card h2,
 .profile-card h3 {
   text-align: center;
 }
 
-.profile-game-card { 
-  width: 600px; 
-  height: 400px; 
-  display: block;
-}
 #profileID {
   max-width: 100%;
   max-height: 100%;
@@ -59,12 +58,7 @@ button {
 }
 .game-card {
   background-color: var(--card-bg-color);
-  display: block;
-}
 
-.game-card2{
-  background-color: var(--card-bg-color);
-  display: none;
 }
 
 .game-card img {
@@ -78,6 +72,6 @@ button {
   /* margin: 5px; */
 }
 
-.game-cover:hover {
+.favBtn:hover {
   cursor: pointer;
 }

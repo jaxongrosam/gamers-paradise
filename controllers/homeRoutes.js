@@ -1,16 +1,17 @@
 const router = require("express").Router();
-const { Post, User, Game } = require("../models");  //add Image?
+const { Post, User, Game, Image } = require("../models");  //add Image?
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
-      include: [
-        {
+      include: [{
           model: User,
           attributes: ["username"],
         },
       ],
+      order: [["date_created", "DESC"]],
+      limit: 10,
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
@@ -46,6 +47,25 @@ try{
 catch (err){res.status(500).json(err);
 }
 });
+
+//view single game with details
+router.get("/games/:id", withAuth, async (req, res) => {
+  try {
+    const gameData = await Game.findAll({
+      include: { all: true, nested: true },
+      where: { id: req.params.id},
+    });
+
+    const game = gameData.map((g) => g.get({ plain: true }));
+
+    res.render("onegame", {
+      game,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
  
 router.get("/profile", withAuth, async (req, res) => {
   try {
@@ -73,24 +93,5 @@ router.get("/signup", (req, res) => {
 
   res.render("signup");
 });
-
-//get game by id
-// router.get("/game/:id", async (req, res) => {
-//   try {
-//     console.log("tester1");
-//     const oneGame = await gameData.findByPk(req.params.id);
-//     if (!oneGame) {
-//       res
-//         .status(404)
-//         .json({ message: "Sorry, I don't see any games with that id." });
-//       return;
-//     }
-//     console.log("tester2");
-//     res.render('gameid');
-//     res.status(200).json(oneGame);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;

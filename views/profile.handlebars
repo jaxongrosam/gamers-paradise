@@ -1,13 +1,14 @@
 <div class="profile-card container">
   <section class="row">
-    <div class="col-3 profile-image card">
-      <img src="{{image}}" alt="No photo" id="profileID" /></div>
-      {{!-- <img src="profile-placeholder.jpg" alt="No photo" id="profileID" /></div> --}}
-            {{!-- <img src="images/Dark_Souls.jpg" alt="No photo" id="profileID" /></div> --}}
-                        {{!-- <img src="./rontron_avatar.png" alt="No photo" id="profileID" /></div> --}}
-    <div class="col-8">
+    <div class="col-md-3 col-sm-12 d-flex justify-content-center align-items-center">
+      <div class="profile-image card">
+        <img src="../uploads/{{image}}" alt="No photo" id="profileID" />
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
       <div class="card">
-        <h2>{{username}}</h2></div>
+        <h2>{{username}}</h2>
+      </div>
       <div class="card">
         <p>Name: {{name}}</p>
         <p>Email: {{email}}</p>
@@ -15,28 +16,33 @@
     </div>
   </section>
   <section class="row">
-    <aside class="col-3 card">
-      <h3>Wishlist</h3>
-      {{#each user.wishlist as |item|}}
-        <p>{{item}}</p>
-      {{/each}}
+    <aside class="col-md-3 col-sm-12">
+      <div class="card">
+        <h3>Wishlist</h3>
+        {{#each user.wishlist as |item|}}
+          <p>{{item}}</p>
+        {{/each}}
+      </div>
     </aside>
-    <div class="col-8 card">
-      <p>Favorite Games: {{favorites}}</p>
-      <p>Platforms: {{platforms}}</p>
-      <p>Genre: {{tags}}</p>
+    <div class="col-md-8 col-sm-12">
+      <div class="card">
+        <p>Favorite Games: {{favorites}}</p>
+        <p>Platforms: {{platforms}}</p>
+        <p>Genre: {{tags}}</p>
+      </div>
     </div>
   </section>
 </div>
 
-{{!-- <div class = "imageupload-form col">
-  <h1>Upload a profile</h1>
-  <form action="/api/upload" method="post" enctype="multipart/form-data">
+
+{{!-- <div class = "col">
+  <h1>Upload a File</h1>
+  <form class ="imageupload-form" action="/profile" method="post" enctype="multipart/form-data">
     <input type="file" name="image" accept=".jpg, .png, .gif">
     <button type="submit">Upload</button>
   </form>
-</div> --}}
-
+</div>
+  <script src="./js/image.js"></script> --}}
 
 
 {{!-- <script src="./js/profile.js"></script> --}}

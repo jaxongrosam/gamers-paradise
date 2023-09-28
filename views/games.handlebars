@@ -1,11 +1,18 @@
-  <div class="profile-game-card container col-lg-3 col-md-6">
+  {{!-- <div class="profile-game-card container col-lg-3 col-md-6 d-flex">
     <section class="row">
       <div class="col">
       {{#each games as |game index|}}
-
         {{>game-list}}
-        {{>game-details}}
-        
+      {{/each}}
+      </div>
+    </section>
+  </div> --}}
+
+    <div class="profile-game-card container">
+    <section class="row">
+      <div class="d-flex align-content-start flex-wrap">
+      {{#each games as |game index|}}
+        {{>game-list}}
       {{/each}}
       </div>
     </section>

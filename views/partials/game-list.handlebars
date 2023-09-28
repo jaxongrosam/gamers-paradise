@@ -1,21 +1,9 @@
-<section class="game-card">
-        <img src="/images/{{image}}" class= "game-cover" id = "toggleButton" alt="Image Description"/>
-
-<div class="gametext-card" flex>
-<p class="display-icon">
-        &#127918; {{title}}
-        <span > &#10084 </span>   
-        <span> &#128722 </span> 
-</p>
-        <p>Title: {{title}}</p>
-        <p>description: {{description}}</p>
-        <p>developer: {{developer}}</p>
-        <p>platform: {{platform}}</p>
-        <p>release_date: {{release_date}}</p>
-        <p>genre: {{genre}}</p>
-
-</div>
-</section>
+<a href="/games/{{id}}"  class="card game-card shadow-sm pt-3 mb-5 bg-white rounded " style="width: 18rem;">
+<img class="card-img-top" src="/images/{{image}}" alt="Card image cap">
+  <div class="card-body d-flex align-content-end flex-wrap">
+    <h5 class="d-flex align-content-end shadow-lg p-3 mb-2 bg-white rounded card-title">{{title}}</h5>
+    </div>
+</a>
 
 
 {{!-- Source of emoji

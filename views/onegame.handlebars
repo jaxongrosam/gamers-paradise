@@ -1,0 +1,25 @@
+{{#each game as |games|}}
+<div class="card" style="width: 26rem;">
+  <div class="row no-gutters">
+    <div class="col-md-6 col-lg-8">
+      <img class="card-img" src="/images/{{image}}" alt="Game Image">
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text">
+          <span style="font-weight: bold">Developer: </span> {{developer}}<br>
+          <span style="font-weight: bold">Platform: </span> {{platform}}<br>
+          <span style="font-weight: bold">Release Date: </span> {{format_date release_date}}<br>
+          <span style="font-weight: bold">Genre: </span> {{genre}}  
+          <a class="col-md-8 col-lg-4 favBtn">  &#10084 </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{{/each}}
+
+<script src="./js/favoriteGame.js"></script>
