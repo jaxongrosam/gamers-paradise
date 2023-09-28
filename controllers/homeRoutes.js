@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post, User, Game } = require("../models");  //add Image?
+const { Post, User, Game } = require("../models"); //add Image?
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -11,6 +11,8 @@ router.get("/", async (req, res) => {
           attributes: ["username"],
         },
       ],
+      order: [["date_created", "DESC"]],
+      limit: 10,
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
@@ -34,19 +36,19 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/games", async (req, res) => {
-try{
-  const gameData = await Game.findAll();
-  const games = gameData.map((games) => games.get({ plain: true }));
+  try {
+    const gameData = await Game.findAll();
+    const games = gameData.map((games) => games.get({ plain: true }));
 
-  res.render("games", {
-    games,
-    logged_in: req.session.logged_in
-  });
-} 
-catch (err){res.status(500).json(err);
-}
+    res.render("games", {
+      games,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
- 
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -93,7 +95,7 @@ router.get("/games/id", async (req, res) => {
         .json({ message: "Sorry, I don't see any games with that id." });
       return;
     }
-    res.render('games');  //wrong?? 
+    res.render("games"); //wrong??
     res.status(200).json(oneGame);
   } catch (err) {
     res.status(500).json(err);
