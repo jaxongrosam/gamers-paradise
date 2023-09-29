@@ -19,6 +19,8 @@ N/A
 
 Gamer's Paradise will require you to make an account, and as soon as you do, you may log in and immediately start browsing the webpage as a whole, making posts and browsing games.
 
+[Link to Deployed App](https://warm-oasis-67190-76d04f0a8bce.herokuapp.com/)
+
 ## Credits
 
 [Thomas Gonquoi Github](https://github.com/Tgonquoi12)
